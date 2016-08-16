@@ -1,5 +1,7 @@
 $(document).ready(function() { 
   $("#color-button").on("click", function(){ 
+    $('form').each(function() { this.reset() });
+    document.getElementById("my-points").innerHTML = "<span>0</span>";
     getColor();
   }); 
   $("#color-1-r-guess").change("change", function() {
@@ -11,6 +13,7 @@ $(document).ready(function() {
   $("#color-1-b-guess").change("change", function() {
     previewColor();
   });
+  $('form').each(function() { this.reset() });
 });
 
 function getColor() {
