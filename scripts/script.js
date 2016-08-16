@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('form').each(function() { this.reset() });
     document.getElementById("my-points").innerHTML = "<span>0</span>";
     getColor();
+    blankPreview();
   }); 
   $("#color-1-r-guess").change("change", function() {
     previewColor();
@@ -54,5 +55,11 @@ function previewColor() {
   document.getElementById("my-points").innerHTML = "<span>" + this.myPoints + "</span>";
   
   //console.log(rValueGuess);
+  
+}
+
+function blankPreview() {
+  
+  $("#color-1-preview").css("background-color", "white");
   
 }
