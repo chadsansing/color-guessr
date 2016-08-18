@@ -36,6 +36,9 @@ function getColor() {
   
   
   document.getElementById("possible-points").innerHTML = "<span>" + this.possiblePoints + "</span>";
+  
+  document.getElementById("actual-value").innerHTML = "<span>rgb(0,0,0)</span>";
+  document.getElementById("my-value").innerHTML = "<span>rgb(0,0,0)</span>";
 
 }
 
@@ -63,9 +66,43 @@ function previewColor() {
 
 function checkMyGuess() {
   
+  // var diffR = 0;
+//   var diffG = 0;
+//   var diffB = 0;
+//
+//   this.diffR = diffR;
+//   this.diffG = diffG;
+//   this.diffB = diffB;
+//
+//   if(this.rValue > this.rValueGuess) {
+//     this.diffR = this.rValue - this.rValueGuess;
+//   }
+//   else {
+//     this.diffR = this.rValueGuess - this.rValue;
+//   }
+//
+//   if(this.gValue > this.gValueGuess) {
+//     this.diffG = this.gValue - this.gValueGuess;
+//   }
+//   else {
+//     this.diffG = this.gValueGuess - this.gValue;
+//   }
+//
+//   if(this.bValue > this.bValueGuess) {
+//     this.diffB = this.bValue - this.bValueGuess;
+//   }
+//   else {
+//     this.diffB = this.bValueGuess - this.bValue;
+//   }
+//
+//   var totalDiff = this.diffR + this.diffG + this.diffB;
+//
+//   this.totalDiff = totalDiff;
+  
   document.getElementById("actual-value").innerHTML = "<span>rgb(" + this.rValue + "," + this.gValue + "," + this.bValue + ")";
   document.getElementById("my-value").innerHTML = "<span>rgb(" + this.rValueGuess.value + "," + this.gValueGuess.value + "," + this.bValueGuess.value +  ")";
-  
+  // document.getElementById("points-off").innerHTML = "<span>" + this.totalDiff + "</span>";
+
 }
 
 function blankPreview() {
