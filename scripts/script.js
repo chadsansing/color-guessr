@@ -5,6 +5,9 @@ $(document).ready(function() {
     getColor();
     blankPreview();
   }); 
+  $("#check").on("click", function() {
+    checkMyGuess();
+  })
   $("#color-1-r-guess").change("change", function() {
     previewColor();
   });
@@ -55,6 +58,13 @@ function previewColor() {
   document.getElementById("my-points").innerHTML = "<span>" + this.myPoints + "</span>";
   
   //console.log(rValueGuess);
+  
+}
+
+function checkMyGuess() {
+  
+  document.getElementById("actual-value").innerHTML = "<span>rgb(" + this.rValue + "," + this.gValue + "," + this.bValue + ")";
+  document.getElementById("my-value").innerHTML = "<span>rgb(" + this.rValueGuess.value + "," + this.gValueGuess.value + "," + this.bValueGuess.value +  ")";
   
 }
 
